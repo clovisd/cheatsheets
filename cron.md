@@ -2,7 +2,7 @@
 title: Cron
 category: CLI
 layout: 2017/sheet
-updated: 2017-08-26
+updated: 2018-05-20
 weight: -3
 ---
 
@@ -28,6 +28,20 @@ Min  Hour Day  Mon  Weekday
 │    └────────────────  Hour     (0..23)
 └─────────────────────  Minute   (0..59)
 ```
+
+### Special Strings
+
+| String | Meaning |
+| --- | --- |
+| `@reboot` | Run once, at startup. |
+| `@yearly` | Run once a year, `0 0 1 1 *`. |
+| `@annually` | (same as @yearly) |
+| `@monthly` | Run once a month, `0 0 1 * *`. |
+| `@weekly` | Run once a week, `0 0 * * 0`. |
+| `@daily` | Run once a day, `0 0 * * *`. |
+| `@midnight` | (same as @daily) |
+| `@hourly` | Run once an hour, `0 * * * *`. |
+
 {: .-setup.-box-chars}
 
 ### Examples
